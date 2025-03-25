@@ -13,6 +13,16 @@ steps:
     versionSpec: '17'
     jdkArchitectureOption: 'x64'
     jdkSourceOption: 'PreInstalled'
+
+- task: SonarQubePrepare@7
+  inputs:
+    SonarQube: 'lurodrig-sonarqube.ngrok.io'
+    scannerMode: 'other'
+    extraProperties:
+      sonar.projectKey=maven-basic_maven-basic_bf4eb8fd-6ed8-40a3-9980-a1e66f86bb2e
+      sonar.projectName=maven-basic
+      sonar.verbose=true
+      
 - task: Maven@4
   inputs:
     mavenPomFile: 'pom.xml'
@@ -23,15 +33,6 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'clean verify sonar:sonar'
-
-- task: SonarQubePrepare@7
-  inputs:
-    SonarQube: 'lurodrig-sonarqube.ngrok.io'
-    scannerMode: 'other'
-    extraProperties:
-      sonar.projectKey=maven-basic_maven-basic_bf4eb8fd-6ed8-40a3-9980-a1e66f86bb2e
-      sonar.projectName=maven-basic
-      sonar.verbose=true
 
 - task: SonarQubePublish@7
   inputs:
