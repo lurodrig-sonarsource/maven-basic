@@ -13,7 +13,7 @@ steps:
     versionSpec: '17'
     jdkArchitectureOption: 'x64'
     jdkSourceOption: 'PreInstalled'
-- task: Maven@3
+- task: Maven@4
   inputs:
     mavenPomFile: 'pom.xml'
     mavenOptions: '-Xmx3072m'
@@ -28,12 +28,11 @@ steps:
   inputs:
     SonarQube: 'lurodrig-sonarqube.ngrok.io'
     scannerMode: 'other'
-    extraProperties: |
-      # Additional properties that will be passed to the scanner, 
-      # Put one key=value per line, example:
-      # sonar.exclusions=**/*.bin
+    extraProperties:
       sonar.projectKey=maven-basic_maven-basic_bf4eb8fd-6ed8-40a3-9980-a1e66f86bb2e
       sonar.projectName=maven-basic
+      sonar.verbose=true
+
 - task: SonarQubeAnalyze@7
   inputs:
     jdkversion: 'JAVA_HOME_17_X64'
