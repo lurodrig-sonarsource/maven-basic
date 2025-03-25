@@ -18,8 +18,6 @@ steps:
   inputs:
     SonarQube: 'lurodrig-sonarqube.ngrok.io'
     scannerMode: 'other'
-    projectKey: maven-basic_maven-basic_bf4eb8fd-6ed8-40a3-9980-a1e66f86bb2e
-    projectName: maven-basic
       
 - task: Maven@4
   inputs:
