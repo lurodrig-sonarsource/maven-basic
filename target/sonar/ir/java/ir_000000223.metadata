@@ -1,0 +1,5 @@
+com.acme.basic.HelloWorld#notCovered()V
+false
+335091c535540a38b06152b09ad608b8
+==
+println java.io.PrintStream#println(Ljava/lang/String;)V

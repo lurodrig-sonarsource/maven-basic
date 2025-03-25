@@ -1,0 +1,5 @@
+com.acme.basic.HelloWorld#sayHello()V
+false
+14831dfae4637c9fddaecafc51c63653
+==
+println java.io.PrintStream#println(Ljava/lang/String;)V
