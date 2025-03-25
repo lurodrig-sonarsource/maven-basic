@@ -13,12 +13,6 @@ steps:
     versionSpec: '17'
     jdkArchitectureOption: 'x64'
     jdkSourceOption: 'PreInstalled'
-- task: SonarQubeAnalyze@7
-  inputs:
-    jdkversion: 'JAVA_HOME_17_X64'
-# Build your Java project and run tests with Apache Maven.
-# Add steps that analyze code, save build artifacts, deploy, and more:
-# https://docs.microsoft.com/azure/devops/pipelines/languages/java
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
@@ -28,7 +22,24 @@ steps:
     jdkArchitectureOption: 'x64'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    goals: 'package'
+    goals: 'clean verify'
+
+- task: SonarQubePrepare@7
+  inputs:
+    SonarQube: 'lurodrig-sonarqube.ngrok.io'
+    scannerMode: 'other'
+    extraProperties: |
+      # Additional properties that will be passed to the scanner, 
+      # Put one key=value per line, example:
+      # sonar.exclusions=**/*.bin
+      sonar.projectKey=maven-basic_maven-basic_bf4eb8fd-6ed8-40a3-9980-a1e66f86bb2e
+      sonar.projectName=maven-basic
+- task: SonarQubeAnalyze@7
+  inputs:
+    jdkversion: 'JAVA_HOME_17_X64'
+# Build your Java project and run tests with Apache Maven.
+# Add steps that analyze code, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/java
 - task: SonarQubePublish@7
   inputs:
     pollingTimeoutSec: '300'
