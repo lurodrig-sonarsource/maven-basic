@@ -1,80 +1,0 @@
-
-1.0maven-basicJavaFrontend"1742404351584*java2.Bë
-1
-,src/main/java/com/acme/basic/HelloWorld.java2
-
-package4
-
-com.acme.basic5
-
-com.acme.basic.HelloWorld7
-
-
-class8
-
-access9
-
-public10
-
-simple name11
-
-
-HelloWorld12
-
-
-uses13
-+
-%com.acme.basic.HelloWorld#sayHello()V15
-
-method16
-
-	protected17
-
-sayHello18
--
-'com.acme.basic.HelloWorld#notCovered()V20
-
-
-notCovered21J
-
-1
-12Z
-
-3	
-354j¿
-@
-14:
-141516 *
-1 (26:3B
-	
-9
-17
-
-
-11
-18
-@
-19:
-192016 *
-1	 	(26:3B
-	
-9
-17
-
-
-11
-21
-9
-64
-678 *
-1 (:3B
-	
-9
-10
-
-
-11
-12r
-
-6613*
-1 (
