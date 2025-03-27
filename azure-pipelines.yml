@@ -5,7 +5,7 @@ trigger:
   branches:
    include: 
     - main
-      support-53467
+    - support-53467
 
 pool:
   vmImage: ubuntu-latest
