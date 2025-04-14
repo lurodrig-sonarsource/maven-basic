@@ -1,7 +1,8 @@
 # Maven
 
 
-trigger: none
+trigger:
+  - main
 
 pool:
   vmImage: ubuntu-latest
