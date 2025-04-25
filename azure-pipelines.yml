@@ -13,7 +13,6 @@ steps:
   inputs:
     SonarQube: 'SUPPORT-53337'
     scannerMode: 'other'
-    projectKey: 'maven-basic_maven-basic_AZY0CDRo-caNeOUS2EMB'
       
 - task: Maven@4
   inputs:
