@@ -11,9 +11,8 @@ steps:
 
 - task: SonarQubePrepare@7
   inputs:
-    SonarQube: 'lurodrig-sonarqube.ngrok.io v9.9.1 (build 69595)'
+    SonarQube: 'SUPPORT-53337'
     scannerMode: 'other'
-    projectKey: 'maven-basic_maven-basic_AZY0CDRo-caNeOUS2EMB'
       
 - task: Maven@4
   inputs:
