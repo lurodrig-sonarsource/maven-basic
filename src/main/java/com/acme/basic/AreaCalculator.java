@@ -32,4 +32,17 @@ public class AreaCalculator {
         }
         return (3 * Math.sqrt(3) * side * side) / 2;
     }
+
+    /**
+     *
+     * @param majorRadius
+     * @param minorRadius
+     * @return
+     */
+    public double calculateToroidArea(double majorRadius, double minorRadius) {
+        if (majorRadius <= 0 || minorRadius <= 0) {
+            throw new IllegalArgumentException("Major and minor radii must be positive");
+        }
+        return 4 * Math.PI * Math.PI * majorRadius * minorRadius;
+    }
 }

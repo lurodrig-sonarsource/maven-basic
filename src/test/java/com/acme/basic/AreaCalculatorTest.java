@@ -67,4 +67,9 @@ class AreaCalculatorTest {
         );
         assertEquals("Side length cannot be negative", exception.getMessage());
     }
+
+    @Test
+    void testCalculateToroidArea() {
+        assertEquals(4 * Math.PI * Math.PI * 2 * 1, areaCalculator.calculateToroidArea(2, 1), 0.0001);
+    }
 }
