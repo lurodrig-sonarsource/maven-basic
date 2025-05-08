@@ -2,7 +2,8 @@ name: Build
 on:
   push:
     branches:
-      - main # the name of your main branch
+      - main
+      - peg-solitaire
   pull_request:
     types: [ opened, synchronize, reopened ]
 jobs:
