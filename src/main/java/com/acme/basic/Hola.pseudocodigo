@@ -1,7 +1,0 @@
-INICIO
-
-SI (codigoEstaLimpio) ENTONCES
-    imprimir("GENIAL!!!")
-SINO
-    imprimir("ARHHHH!!!")
-FIN
