@@ -19,3 +19,5 @@ buildNumber.properties
 =======
 # intellij idea
 .idea
+.idea/
+.idea/*
